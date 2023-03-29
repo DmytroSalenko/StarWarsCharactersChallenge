@@ -13,7 +13,7 @@ enum APIMethod: String {
 }
 
 struct APIEndpoint {
-    var baseURL: String = "swapi.dev/api/"
+    var host: String = "swapi.dev/api/"
     var path: String
     var method: APIMethod = APIMethod.get
     var scheme: String = "https"
@@ -24,7 +24,7 @@ struct APIEndpoint {
     var baseURL: URL {
         var components = URLComponents()
         components.scheme = scheme
-        components.host = baseURL
+        components.host = host
         return components.url!
     }
     
@@ -38,7 +38,7 @@ struct APIEndpoint {
     var urlComponents: URLComponents {
         var components = URLComponents()
         components.scheme = scheme
-        components.host = baseURL
+        components.host = host
         components.path = path
         components.queryItems = queryItems.isEmpty ? nil : queryItems
         return components
