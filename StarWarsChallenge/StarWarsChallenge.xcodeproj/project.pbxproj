@@ -117,7 +117,6 @@
 				8571B0FE29D4B09B00BD1837 /* Application */,
 				8571B0F729D4AECA00BD1837 /* Networking */,
 				8571B0F429D4AE1800BD1837 /* Models */,
-				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
 				8571B0CE29D4A7C300BD1837 /* Assets.xcassets */,
 				8571B0D029D4A7C300BD1837 /* Preview Content */,
 			);
@@ -188,6 +187,7 @@
 		8571B0FE29D4B09B00BD1837 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				8571B11129D4CB5B00BD1837 /* Screens */,
 				8571B0FF29D4B0D800BD1837 /* Utilities */,
 				8571B0CA29D4A7C000BD1837 /* StarWarsChallengeApp.swift */,
 			);
@@ -219,6 +219,14 @@
 				8571B10429D4B67A00BD1837 /* PeopleAPIClient.swift */,
 			);
 			path = APICLients;
+			sourceTree = "<group>";
+		};
+		8571B11129D4CB5B00BD1837 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -50,7 +50,7 @@ extension Loadable {
     }
 }
 
-// MARK: - Loadable + Optinal unwrap for getting the value from the optional results
+// MARK: - Loadable + Optional unwrap for getting the value from the optional results
 protocol SomeOptional {
     associatedtype Wrapped
     func unwrap() throws -> Wrapped

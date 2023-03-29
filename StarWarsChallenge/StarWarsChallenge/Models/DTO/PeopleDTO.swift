@@ -24,6 +24,4 @@ struct PeopleDTO: Decodable {
     let birthYear: String
     let gender: String
     let films: [String]
-    
-    
 }
