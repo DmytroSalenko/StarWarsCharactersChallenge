@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    var cancelBag = CancelBag()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +18,11 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            PeopleAPIClient().getPeople()
+                .sink(receiveCompletion: {_ in print("Error")}, receiveValue: {_ in print("Success")})
+                .store(in: cancelBag)
+        }
     }
 }
 

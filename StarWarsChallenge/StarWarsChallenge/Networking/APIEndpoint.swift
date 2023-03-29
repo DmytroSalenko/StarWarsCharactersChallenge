@@ -13,7 +13,7 @@ enum APIMethod: String {
 }
 
 struct APIEndpoint {
-    var host: String = "swapi.dev/api/"
+    var host: String = "swapi.dev"
     var path: String
     var method: APIMethod = APIMethod.get
     var scheme: String = "https"
