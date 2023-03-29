@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+typealias LoadableSubject<Value> = Binding<Loadable<Value>>
 
 enum Loadable<Value> {
     case idle

@@ -24,6 +24,10 @@
 		8571B10C29D4BFD900BD1837 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B10B29D4BFD900BD1837 /* PeopleModel.swift */; };
 		8571B10E29D4C8B300BD1837 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B10D29D4C8B300BD1837 /* Loadable.swift */; };
 		8571B11029D4C93500BD1837 /* Publisher+Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B10F29D4C93500BD1837 /* Publisher+Loadable.swift */; };
+		8571B11629D4CD7700BD1837 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11529D4CD7700BD1837 /* PeopleManager.swift */; };
+		8571B11829D4CDB000BD1837 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11729D4CDB000BD1837 /* CompositionRoot.swift */; };
+		8571B11A29D4D46B00BD1837 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11929D4D46B00BD1837 /* DependencyInjection.swift */; };
+		8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		8571B10B29D4BFD900BD1837 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		8571B10D29D4C8B300BD1837 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		8571B10F29D4C93500BD1837 /* Publisher+Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Loadable.swift"; sourceTree = "<group>"; };
+		8571B11529D4CD7700BD1837 /* PeopleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
+		8571B11729D4CDB000BD1837 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		8571B11929D4D46B00BD1837 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 		8571B0F529D4AE2B00BD1837 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -187,9 +196,10 @@
 		8571B0FE29D4B09B00BD1837 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				8571B11229D4CD1900BD1837 /* System */,
 				8571B11129D4CB5B00BD1837 /* Screens */,
+				8571B11429D4CD6400BD1837 /* Managers */,
 				8571B0FF29D4B0D800BD1837 /* Utilities */,
-				8571B0CA29D4A7C000BD1837 /* StarWarsChallengeApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -224,9 +234,35 @@
 		8571B11129D4CB5B00BD1837 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
+				8571B11329D4CD4F00BD1837 /* MainScreen */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		8571B11229D4CD1900BD1837 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8571B0CA29D4A7C000BD1837 /* StarWarsChallengeApp.swift */,
+				8571B11729D4CDB000BD1837 /* CompositionRoot.swift */,
+				8571B11929D4D46B00BD1837 /* DependencyInjection.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		8571B11329D4CD4F00BD1837 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		8571B11429D4CD6400BD1837 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8571B11529D4CD7700BD1837 /* PeopleManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,16 +397,20 @@
 			files = (
 				8571B10229D4B10300BD1837 /* JSONDecoder+Additions.swift in Sources */,
 				8571B0CD29D4A7C000BD1837 /* ContentView.swift in Sources */,
+				8571B11A29D4D46B00BD1837 /* DependencyInjection.swift in Sources */,
 				8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */,
 				8571B0CB29D4A7C000BD1837 /* StarWarsChallengeApp.swift in Sources */,
 				8571B11029D4C93500BD1837 /* Publisher+Loadable.swift in Sources */,
 				8571B10C29D4BFD900BD1837 /* PeopleModel.swift in Sources */,
 				8571B0FD29D4B02500BD1837 /* APIError.swift in Sources */,
 				8571B10929D4BA2700BD1837 /* CancelBag.swift in Sources */,
+				8571B11829D4CDB000BD1837 /* CompositionRoot.swift in Sources */,
 				8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */,
 				8571B10E29D4C8B300BD1837 /* Loadable.swift in Sources */,
 				8571B10729D4B78800BD1837 /* PeopleDTO.swift in Sources */,
+				8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */,
 				8571B10529D4B67A00BD1837 /* PeopleAPIClient.swift in Sources */,
+				8571B11629D4CD7700BD1837 /* PeopleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

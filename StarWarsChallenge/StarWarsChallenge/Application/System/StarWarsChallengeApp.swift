@@ -12,6 +12,7 @@ struct StarWarsChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .inject(AppEnvironment.bootstrap().container)
         }
     }
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var cancelBag = CancelBag()
+    @Environment(\.injected.managers) var managers: ManagersDIContainer
+    @State private var peopleData: Loadable<PeopleData> = .idle
+
     
     var body: some View {
         VStack {
@@ -19,18 +21,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            PeopleAPIClient().getPeople()
-                .sinkToLoadable({ loadableResult in
-                    switch loadableResult {
-                    case .loaded(let result):
-                        print(result)
-                    case .failed(let error):
-                        print(error)
-                    default:
-                        print("unknown")
-                    }
-                })
-                .store(in: cancelBag)
+            managers.peopleManager.getPeople($peopleData)
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PeopleResponse {
+struct PeopleData {
     let count: Int
     let previous: String?
     let next: String?
@@ -18,10 +18,10 @@ struct PeopleModel {
     let name: String
     let height: Int
     let mass: Int
-    let hair_color: String
-    let skin_color: String
-    let eye_color: String
-    let birth_year: String
+    let hairColor: String
+    let skinColor: String
+    let eyeColor: String
+    let birthYear: Int
     let gender: String
     let films: [String]
 }
