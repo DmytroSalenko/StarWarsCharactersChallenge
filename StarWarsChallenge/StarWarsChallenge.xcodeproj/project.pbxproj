@@ -16,6 +16,7 @@
 		8571B0E829D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */; };
 		8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */; };
 		8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0FA29D4AFCD00BD1837 /* APIClient.swift */; };
+		8571B0FD29D4B02500BD1837 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0FC29D4B02500BD1837 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		8571B0FA29D4AFCD00BD1837 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8571B0FC29D4B02500BD1837 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */,
 				8571B0FA29D4AFCD00BD1837 /* APIClient.swift */,
+				8571B0FC29D4B02500BD1837 /* APIError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				8571B0CD29D4A7C000BD1837 /* ContentView.swift in Sources */,
 				8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */,
 				8571B0CB29D4A7C000BD1837 /* StarWarsChallengeApp.swift in Sources */,
+				8571B0FD29D4B02500BD1837 /* APIError.swift in Sources */,
 				8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
