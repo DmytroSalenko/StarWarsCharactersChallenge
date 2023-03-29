@@ -20,7 +20,11 @@ struct ContentView: View {
         .padding()
         .onAppear {
             PeopleAPIClient().getPeople()
-                .sink(receiveCompletion: {_ in print("Error")}, receiveValue: {_ in print("Success")})
+                .sink(receiveCompletion: {error in
+                    print(error)
+                }, receiveValue: {data in
+                    print(data)
+                })
                 .store(in: cancelBag)
         }
     }

@@ -28,8 +28,8 @@ final class PeopleAPIClient: APIClient {
     self.init(session: URLSession(configuration: .default))
   }
   
-    func getPeople(endpoint: APIEndpoint=APIEndpoint.peopleEndpoint) -> AnyPublisher<PeopleDTO, Error> {
-    execute(endpoint.request, decodingType: PeopleDTO.self )
+    func getPeople(endpoint: APIEndpoint=APIEndpoint.peopleEndpoint) -> AnyPublisher<PeopleResponseDTO, Error> {
+    execute(endpoint.request, decodingType: PeopleResponseDTO.self )
   }
 }
 
