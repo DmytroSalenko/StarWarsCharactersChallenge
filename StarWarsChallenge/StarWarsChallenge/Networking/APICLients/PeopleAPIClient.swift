@@ -18,18 +18,18 @@ extension APIEndpoint {
 
 // MARK: - People API client
 final class PeopleAPIClient: APIClient {
-  let session: URLSession
-  
-  init(session: URLSession) {
-    self.session = session
-  }
-  
-  convenience init() {
-    self.init(session: URLSession(configuration: .default))
-  }
-  
+    let session: URLSession
+    
+    init(session: URLSession) {
+        self.session = session
+    }
+    
+    convenience init() {
+        self.init(session: URLSession(configuration: .default))
+    }
+    
     func getPeople(endpoint: APIEndpoint=APIEndpoint.peopleEndpoint) -> AnyPublisher<PeopleResponseDTO, Error> {
-    execute(endpoint.request, decodingType: PeopleResponseDTO.self )
-  }
+        execute(endpoint.request, decodingType: PeopleResponseDTO.self )
+    }
 }
 

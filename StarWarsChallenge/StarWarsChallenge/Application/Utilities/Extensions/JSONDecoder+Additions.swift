@@ -8,8 +8,8 @@
 import Foundation
 
 extension JSONDecoder {
-  func withDecodingStrategy(_ strategy: KeyDecodingStrategy) -> Self {
-    keyDecodingStrategy = strategy
-    return self
-  }
+    func withDecodingStrategy(_ strategy: KeyDecodingStrategy) -> Self {
+        keyDecodingStrategy = strategy
+        return self
+    }
 }
