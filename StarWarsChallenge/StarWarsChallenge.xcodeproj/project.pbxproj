@@ -14,6 +14,8 @@
 		8571B0DC29D4A7C300BD1837 /* StarWarsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0DB29D4A7C300BD1837 /* StarWarsChallengeTests.swift */; };
 		8571B0E629D4A7C300BD1837 /* StarWarsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0E529D4A7C300BD1837 /* StarWarsChallengeUITests.swift */; };
 		8571B0E829D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */; };
+		8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */; };
+		8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0FA29D4AFCD00BD1837 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8571B0E129D4A7C300BD1837 /* StarWarsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8571B0E529D4A7C300BD1837 /* StarWarsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITests.swift; sourceTree = "<group>"; };
 		8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		8571B0FA29D4AFCD00BD1837 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		8571B0C929D4A7C000BD1837 /* StarWarsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				8571B0F729D4AECA00BD1837 /* Networking */,
+				8571B0F429D4AE1800BD1837 /* Models */,
 				8571B0CA29D4A7C000BD1837 /* StarWarsChallengeApp.swift */,
 				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
 				8571B0CE29D4A7C300BD1837 /* Assets.xcassets */,
@@ -125,6 +131,38 @@
 				8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */,
 			);
 			path = StarWarsChallengeUITests;
+			sourceTree = "<group>";
+		};
+		8571B0F429D4AE1800BD1837 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8571B0F629D4AE3500BD1837 /* DTO */,
+				8571B0F529D4AE2B00BD1837 /* Mappers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8571B0F529D4AE2B00BD1837 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8571B0F629D4AE3500BD1837 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		8571B0F729D4AECA00BD1837 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */,
+				8571B0FA29D4AFCD00BD1837 /* APIClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8571B0CD29D4A7C000BD1837 /* ContentView.swift in Sources */,
+				8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */,
 				8571B0CB29D4A7C000BD1837 /* StarWarsChallengeApp.swift in Sources */,
+				8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
