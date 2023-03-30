@@ -30,6 +30,7 @@ final class PeopleManager: PeopleManagerProtocol {
     func getAllPeople(_ requestStatus: LoadableSubject<[PeopleModel]>) {
         requestStatus.wrappedValue.setIsLoading()
         
+        // Get the total number of characters and calculate the total number of pages to request
         let pagesLeft = clients.peopleAPIClient.getPeople(request: .getPeopleRequest())
             .compactMap {
                 let count = Double($0.count)
@@ -37,6 +38,7 @@ final class PeopleManager: PeopleManagerProtocol {
                 return Array(1...Int(pagesLeft))
             }.eraseToAnyPublisher()
         
+        // Fetch all the characters from all the pages
         let data = pagesLeft.flatMap { ids in
             let models = ids.map({self.clients.peopleAPIClient.getPeople(request: .getPeopleRequest(page: Int($0)))})
             return Publishers.MergeMany(models)
@@ -44,6 +46,7 @@ final class PeopleManager: PeopleManagerProtocol {
                 .eraseToAnyPublisher()
         }.eraseToAnyPublisher()
         
+        // Transform the response data into the flat sorted array of characters
         data.map { peopleData in
             peopleData.flatMap { $0.results }
                 .sorted { $0.name.lowercased() < $1.name.lowercased() }
