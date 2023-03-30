@@ -10,9 +10,13 @@ import Combine
 
 // MARK: - People endpoint
 extension APIEndpoint {
-    static var peopleEndpoint: Self {
+    static func peopleEndpoint(page: Int? = nil) -> Self {
         let path = "/api/people"
-        return APIEndpoint(path: path)
+        var queryItems = [URLQueryItem]()
+        if let page {
+            queryItems.append(URLQueryItem(name: "page", value: String(page)))
+        }
+        return APIEndpoint(path: path, queryItems: queryItems)
     }
 }
 
@@ -28,8 +32,12 @@ final class PeopleAPIClient: APIClient {
         self.init(session: URLSession(configuration: .default))
     }
     
-    func getPeople(endpoint: APIEndpoint=APIEndpoint.peopleEndpoint) -> AnyPublisher<PeopleResponseDTO, Error> {
-        execute(endpoint.request, decodingType: PeopleResponseDTO.self )
+    func getPeople(endpoint: APIEndpoint=APIEndpoint.peopleEndpoint()) -> AnyPublisher<PeopleData, Error> {
+        execute(endpoint.request, decodingType: PeopleResponseDTO.self)
+            .map {
+                PeopleModelMapper.mapToModel(from: $0)
+            }
+            .eraseToAnyPublisher()
     }
 }
 

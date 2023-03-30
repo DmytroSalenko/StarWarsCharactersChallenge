@@ -23,7 +23,7 @@ extension AnyCancellable {
     }
 }
 
-// MARK: - Adds the default ability for the Interactor to cancel all the Publishers
+// MARK: - Adds the default ability for the Manager to cancel all the Publishers
 protocol Unsubscriptable {
     var cancelBag: CancelBag { get }
     func cancelSubscriptions()

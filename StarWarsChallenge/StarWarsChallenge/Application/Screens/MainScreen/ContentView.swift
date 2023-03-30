@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.injected.managers) var managers: ManagersDIContainer
-    @State private var peopleData: Loadable<PeopleData> = .idle
+    @State private var peopleData: Loadable<[PeopleModel]> = .idle
 
-    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,7 +20,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            managers.peopleManager.getPeople($peopleData)
+            managers.peopleManager.getAllPeople($peopleData)
         }
     }
 }
