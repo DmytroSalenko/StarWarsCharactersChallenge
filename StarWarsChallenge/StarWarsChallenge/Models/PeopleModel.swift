@@ -14,14 +14,15 @@ struct PeopleData {
     let results: [PeopleModel]
 }
 
-struct PeopleModel {
+struct PeopleModel: Identifiable, Hashable {
+    let id = UUID()
     let name: String
     let height: Int
     let mass: Int
     let hairColor: String
     let skinColor: String
     let eyeColor: String
-    let birthYear: Int
+    let birthYear: String
     let gender: String
     let films: [String]
 }

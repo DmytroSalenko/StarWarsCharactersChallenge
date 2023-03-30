@@ -16,7 +16,7 @@ struct PeopleModelMapper {
                         hairColor: $0.hairColor,
                         skinColor: $0.skinColor,
                         eyeColor: $0.eyeColor,
-                        birthYear: Int($0.birthYear) ?? 0,
+                        birthYear: $0.birthYear,
                         gender: $0.gender,
                         films: $0.films)
         }

@@ -18,11 +18,14 @@ struct ContentView: View {
                 EmptyView()
             case .isLoading:
                 ProgressView()
-            case .loaded(let value):
-                List {
-                    ForEach(value, id: \.name) { entry in
-                        Text(entry.name)
+            case .loaded(let peopleModels):
+                NavigationStack {
+                    List(peopleModels) { person in
+                        NavigationLink(person.name, value: person)
                     }
+                    .navigationDestination(for: PeopleModel.self) { person in
+                            DetailsView(person: person)
+                        }
                 }
             case .failed(let error):
                 EmptyView()

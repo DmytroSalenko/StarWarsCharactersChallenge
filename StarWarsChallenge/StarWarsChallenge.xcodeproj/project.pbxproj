@@ -28,6 +28,7 @@
 		8571B11829D4CDB000BD1837 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11729D4CDB000BD1837 /* CompositionRoot.swift */; };
 		8571B11A29D4D46B00BD1837 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11929D4D46B00BD1837 /* DependencyInjection.swift */; };
 		8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */; };
+		8571B11E29D5E53F00BD1837 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11D29D5E53F00BD1837 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		8571B11729D4CDB000BD1837 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		8571B11929D4D46B00BD1837 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMapper.swift; sourceTree = "<group>"; };
+		8571B11D29D5E53F00BD1837 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B0CC29D4A7C000BD1837 /* ContentView.swift */,
+				8571B11D29D5E53F00BD1837 /* DetailsView.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				8571B10E29D4C8B300BD1837 /* Loadable.swift in Sources */,
 				8571B10729D4B78800BD1837 /* PeopleDTO.swift in Sources */,
 				8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */,
+				8571B11E29D5E53F00BD1837 /* DetailsView.swift in Sources */,
 				8571B10529D4B67A00BD1837 /* PeopleAPIClient.swift in Sources */,
 				8571B11629D4CD7700BD1837 /* PeopleManager.swift in Sources */,
 			);
