@@ -26,7 +26,9 @@ final class PeopleManager: PeopleManagerProtocol {
     }
     
     func getAllPeople(_ requestStatus: LoadableSubject<[PeopleModel]>) {
-        var pages = [1, 2].publisher
+        requestStatus.wrappedValue.setIsLoading()
+        
+        var pages = [1, 2, 3, 4, 5, 6, 7, 8, 9].publisher
         
         pages.flatMap { page in
             self.clients.peopleAPIClient.getPeople(endpoint: .peopleEndpoint(page: page))

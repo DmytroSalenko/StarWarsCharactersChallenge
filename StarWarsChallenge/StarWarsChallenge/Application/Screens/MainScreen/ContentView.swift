@@ -13,12 +13,21 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            switch peopleData {
+            case .idle:
+                EmptyView()
+            case .isLoading:
+                ProgressView()
+            case .loaded(let value):
+                List {
+                    ForEach(value, id: \.name) { entry in
+                        Text(entry.name)
+                    }
+                }
+            case .failed(let error):
+                EmptyView()
+            }
         }
-        .padding()
         .onAppear {
             managers.peopleManager.getAllPeople($peopleData)
         }
