@@ -31,7 +31,7 @@ final class PeopleManager: PeopleManagerProtocol {
         var pages = [1, 2, 3, 4, 5, 6, 7, 8, 9].publisher
         
         pages.flatMap { page in
-            self.clients.peopleAPIClient.getPeople(endpoint: .peopleEndpoint(page: page))
+            self.clients.peopleAPIClient.getPeople(request: .getPeopleRequest(page: page))
         }
         .collect()
         .map {

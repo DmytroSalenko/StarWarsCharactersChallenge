@@ -10,23 +10,28 @@ import SwiftUI
 
 struct APIClientsDIContainer {
     let peopleAPIClient: PeopleAPIClient
+    let filmsAPIClient: FilmsAPIClient
     
     init(session: URLSession = URLSession(configuration: .default)) {
         peopleAPIClient = PeopleAPIClient(session: session)
+        filmsAPIClient = FilmsAPIClient(session: session)
     }
 }
 
 struct ManagersDIContainer {
     let peopleManager: PeopleManagerProtocol
+    let filmsManager: FilmManagerProtocol
 
     static var stub: Self {
-        ManagersDIContainer(peopleManager: StubPeopleManager())
+        ManagersDIContainer(peopleManager: StubPeopleManager(),
+                            filmsManager: StubFilmManager())
     }
 }
 
 extension ManagersDIContainer {
     init(apiClients: APIClientsDIContainer) {
         peopleManager = PeopleManager(clients: apiClients)
+        filmsManager = FilmManager(clients: apiClients)
     }
 }
 

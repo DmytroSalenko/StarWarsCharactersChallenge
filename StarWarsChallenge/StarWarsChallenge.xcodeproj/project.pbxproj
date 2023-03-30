@@ -14,7 +14,7 @@
 		8571B0DC29D4A7C300BD1837 /* StarWarsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0DB29D4A7C300BD1837 /* StarWarsChallengeTests.swift */; };
 		8571B0E629D4A7C300BD1837 /* StarWarsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0E529D4A7C300BD1837 /* StarWarsChallengeUITests.swift */; };
 		8571B0E829D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */; };
-		8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */; };
+		8571B0F929D4AF0800BD1837 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0F829D4AF0800BD1837 /* APIRequest.swift */; };
 		8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0FA29D4AFCD00BD1837 /* APIClient.swift */; };
 		8571B0FD29D4B02500BD1837 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B0FC29D4B02500BD1837 /* APIError.swift */; };
 		8571B10229D4B10300BD1837 /* JSONDecoder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B10129D4B10300BD1837 /* JSONDecoder+Additions.swift */; };
@@ -27,8 +27,13 @@
 		8571B11629D4CD7700BD1837 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11529D4CD7700BD1837 /* PeopleManager.swift */; };
 		8571B11829D4CDB000BD1837 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11729D4CDB000BD1837 /* CompositionRoot.swift */; };
 		8571B11A29D4D46B00BD1837 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11929D4D46B00BD1837 /* DependencyInjection.swift */; };
-		8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */; };
+		8571B11C29D4D8DC00BD1837 /* PeopleDataModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11B29D4D8DC00BD1837 /* PeopleDataModelMapper.swift */; };
 		8571B11E29D5E53F00BD1837 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11D29D5E53F00BD1837 /* DetailsView.swift */; };
+		8571B12029D5F1AB00BD1837 /* FilmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B11F29D5F1AB00BD1837 /* FilmManager.swift */; };
+		8571B12229D5FC1F00BD1837 /* FilmsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12129D5FC1F00BD1837 /* FilmsAPIClient.swift */; };
+		8571B12429D6080600BD1837 /* FilmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12329D6080600BD1837 /* FilmDTO.swift */; };
+		8571B12629D608AC00BD1837 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12529D608AC00BD1837 /* FilmModel.swift */; };
+		8571B12829D6097B00BD1837 /* FilmModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12729D6097B00BD1837 /* FilmModelMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,7 @@
 		8571B0E129D4A7C300BD1837 /* StarWarsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8571B0E529D4A7C300BD1837 /* StarWarsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITests.swift; sourceTree = "<group>"; };
 		8571B0E729D4A7C300BD1837 /* StarWarsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		8571B0F829D4AF0800BD1837 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		8571B0FA29D4AFCD00BD1837 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8571B0FC29D4B02500BD1837 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		8571B10129D4B10300BD1837 /* JSONDecoder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Additions.swift"; sourceTree = "<group>"; };
@@ -72,8 +77,13 @@
 		8571B11529D4CD7700BD1837 /* PeopleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
 		8571B11729D4CDB000BD1837 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		8571B11929D4D46B00BD1837 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
-		8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMapper.swift; sourceTree = "<group>"; };
+		8571B11B29D4D8DC00BD1837 /* PeopleDataModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataModelMapper.swift; sourceTree = "<group>"; };
 		8571B11D29D5E53F00BD1837 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		8571B11F29D5F1AB00BD1837 /* FilmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmManager.swift; sourceTree = "<group>"; };
+		8571B12129D5FC1F00BD1837 /* FilmsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsAPIClient.swift; sourceTree = "<group>"; };
+		8571B12329D6080600BD1837 /* FilmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDTO.swift; sourceTree = "<group>"; };
+		8571B12529D608AC00BD1837 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		8571B12729D6097B00BD1837 /* FilmModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModelMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +174,7 @@
 				8571B0F529D4AE2B00BD1837 /* Mappers */,
 				8571B0F629D4AE3500BD1837 /* DTO */,
 				8571B10B29D4BFD900BD1837 /* PeopleModel.swift */,
+				8571B12529D608AC00BD1837 /* FilmModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,7 +182,8 @@
 		8571B0F529D4AE2B00BD1837 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
-				8571B11B29D4D8DC00BD1837 /* PeopleModelMapper.swift */,
+				8571B11B29D4D8DC00BD1837 /* PeopleDataModelMapper.swift */,
+				8571B12729D6097B00BD1837 /* FilmModelMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -180,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B10629D4B78800BD1837 /* PeopleDTO.swift */,
+				8571B12329D6080600BD1837 /* FilmDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -188,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B10329D4B63600BD1837 /* APICLients */,
-				8571B0F829D4AF0800BD1837 /* APIEndpoint.swift */,
+				8571B0F829D4AF0800BD1837 /* APIRequest.swift */,
 				8571B0FA29D4AFCD00BD1837 /* APIClient.swift */,
 				8571B0FC29D4B02500BD1837 /* APIError.swift */,
 			);
@@ -229,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B10429D4B67A00BD1837 /* PeopleAPIClient.swift */,
+				8571B12129D5FC1F00BD1837 /* FilmsAPIClient.swift */,
 			);
 			path = APICLients;
 			sourceTree = "<group>";
@@ -264,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B11529D4CD7700BD1837 /* PeopleManager.swift */,
+				8571B11F29D5F1AB00BD1837 /* FilmManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -399,9 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8571B10229D4B10300BD1837 /* JSONDecoder+Additions.swift in Sources */,
+				8571B12229D5FC1F00BD1837 /* FilmsAPIClient.swift in Sources */,
 				8571B0CD29D4A7C000BD1837 /* ContentView.swift in Sources */,
+				8571B12429D6080600BD1837 /* FilmDTO.swift in Sources */,
+				8571B12829D6097B00BD1837 /* FilmModelMapper.swift in Sources */,
+				8571B12629D608AC00BD1837 /* FilmModel.swift in Sources */,
 				8571B11A29D4D46B00BD1837 /* DependencyInjection.swift in Sources */,
-				8571B0F929D4AF0800BD1837 /* APIEndpoint.swift in Sources */,
+				8571B0F929D4AF0800BD1837 /* APIRequest.swift in Sources */,
 				8571B0CB29D4A7C000BD1837 /* StarWarsChallengeApp.swift in Sources */,
 				8571B11029D4C93500BD1837 /* Publisher+Loadable.swift in Sources */,
 				8571B10C29D4BFD900BD1837 /* PeopleModel.swift in Sources */,
@@ -411,7 +430,8 @@
 				8571B0FB29D4AFCD00BD1837 /* APIClient.swift in Sources */,
 				8571B10E29D4C8B300BD1837 /* Loadable.swift in Sources */,
 				8571B10729D4B78800BD1837 /* PeopleDTO.swift in Sources */,
-				8571B11C29D4D8DC00BD1837 /* PeopleModelMapper.swift in Sources */,
+				8571B12029D5F1AB00BD1837 /* FilmManager.swift in Sources */,
+				8571B11C29D4D8DC00BD1837 /* PeopleDataModelMapper.swift in Sources */,
 				8571B11E29D5E53F00BD1837 /* DetailsView.swift in Sources */,
 				8571B10529D4B67A00BD1837 /* PeopleAPIClient.swift in Sources */,
 				8571B11629D4CD7700BD1837 /* PeopleManager.swift in Sources */,

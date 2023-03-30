@@ -12,9 +12,10 @@ enum APIMethod: String {
     case post = "POST"
 }
 
-struct APIEndpoint {
+struct APIRequest {
     var host: String = "swapi.dev"
     var path: String
+    var appendingPathWith: [String] = []
     var method: APIMethod = APIMethod.get
     var scheme: String = "https"
     var queryItems: [URLQueryItem] = []
@@ -39,7 +40,7 @@ struct APIEndpoint {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
-        components.path = path
+        components.path = NSString.path(withComponents: [path] + appendingPathWith)
         components.queryItems = queryItems.isEmpty ? nil : queryItems
         return components
     }
