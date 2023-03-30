@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 protocol PeopleManagerProtocol: Unsubscriptable {
     func getAllPeople(_ requestStatus: LoadableSubject<[PeopleModel]>)
@@ -16,6 +17,7 @@ final class PeopleManager: PeopleManagerProtocol {
      It contains all the logic related to the work with People data */
     let clients: APIClientsDIContainer
     var cancelBag = CancelBag()
+    
     
     init(clients: APIClientsDIContainer) {
         self.clients = clients
@@ -28,14 +30,22 @@ final class PeopleManager: PeopleManagerProtocol {
     func getAllPeople(_ requestStatus: LoadableSubject<[PeopleModel]>) {
         requestStatus.wrappedValue.setIsLoading()
         
-        var pages = [1, 2, 3, 4, 5, 6, 7, 8, 9].publisher
+        let pagesLeft = clients.peopleAPIClient.getPeople(request: .getPeopleRequest())
+            .compactMap {
+                let count = Double($0.count)
+                let pagesLeft = ceil((count - 1) / 10)
+                return Array(1...Int(pagesLeft))
+            }.eraseToAnyPublisher()
         
-        pages.flatMap { page in
-            self.clients.peopleAPIClient.getPeople(request: .getPeopleRequest(page: page))
-        }
-        .collect()
-        .map {
-            $0.flatMap { $0.results }
+        let data = pagesLeft.flatMap { ids in
+            let models = ids.map({self.clients.peopleAPIClient.getPeople(request: .getPeopleRequest(page: Int($0)))})
+            return Publishers.MergeMany(models)
+                .collect()
+                .eraseToAnyPublisher()
+        }.eraseToAnyPublisher()
+        
+        data.map { peopleData in
+            peopleData.flatMap { $0.results }
                 .sorted { $0.name.lowercased() < $1.name.lowercased() }
         }
         .sinkToLoadable {
