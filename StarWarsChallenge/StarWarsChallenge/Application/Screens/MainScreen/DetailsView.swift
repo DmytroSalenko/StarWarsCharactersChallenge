@@ -48,7 +48,12 @@ struct DetailsView: View {
                 case .loaded(let films):
                     VStack {
                         ForEach(films) { film in
-                            Text(film.title)
+                            HStack {
+                                Text(film.title)
+                                
+                                Text("\(film.crawlWordsNumber) words")
+                                    .padding(.horizontal)
+                            }
                         }
                     }
                 case .failed(_):
@@ -59,7 +64,7 @@ struct DetailsView: View {
             Spacer()
         }
         .onAppear {
-            managers.filmsManager.getFilms($filmsRequestStatus, ids: ["1", "2"])
+            managers.filmsManager.getFilms($filmsRequestStatus, ids: person.filmIds)
         }
     }
 }

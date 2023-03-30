@@ -16,4 +16,9 @@ struct FilmModel: Identifiable {
     let openingCrawl: String
     let director: String
     let producer: String
+    
+    var crawlWordsNumber: Int {
+        let components = openingCrawl.components(separatedBy: .whitespacesAndNewlines)
+        return components.filter { !$0.isEmpty }.count
+    }
 }

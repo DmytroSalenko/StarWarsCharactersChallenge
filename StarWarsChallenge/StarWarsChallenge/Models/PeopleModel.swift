@@ -25,4 +25,8 @@ struct PeopleModel: Identifiable, Hashable {
     let birthYear: String
     let gender: String
     let films: [String]
+    
+    var filmIds: [String] {
+        films.compactMap { URL(string: $0)?.lastPathComponent }
+    }
 }
