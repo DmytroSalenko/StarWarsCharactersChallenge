@@ -17,27 +17,24 @@ struct DetailsView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             Text(person.name)
                 .font(Font.title)
                 .padding(.bottom)
             
-            HStack {
-                VStack(alignment: .leading, spacing: Constants.descriptionTextSpacing) {
-                    Text("Height: \(person.height.capitalized)")
-                    Text("Mass: \(person.mass.capitalized)")
-                    Text("Hair color: \(person.hairColor.capitalized)")
-                    Text("Skin color: \(person.skinColor.capitalized)")
-                    Text("Eye color: \(person.eyeColor.capitalized)")
-                    
-                    Text("Appeared in:")
-                        .font(Font.title2)
-                        .padding(.top, 20)
-                }
-                .padding()
+            VStack(alignment: .leading, spacing: Constants.descriptionTextSpacing) {
+                Text("Height: \(person.height.capitalized)")
+                Text("Mass: \(person.mass.capitalized)")
+                Text("Hair color: \(person.hairColor.capitalized)")
+                Text("Skin color: \(person.skinColor.capitalized)")
+                Text("Eye color: \(person.eyeColor.capitalized)")
                 
-                Spacer()
+                Text("Appeared in:")
+                    .font(Font.title2)
+                    .padding(.top, 20)
             }
+            .padding()
+            
             
             VStack {
                 switch filmsRequestStatus {
@@ -67,6 +64,9 @@ struct DetailsView: View {
             
             Spacer()
         }
+        .fontWeight(.heavy)
+        .foregroundColor(Color.yellow)
+        .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
         .onAppear {
             managers.filmsManager.getFilms($filmsRequestStatus, ids: person.filmIds)
         }

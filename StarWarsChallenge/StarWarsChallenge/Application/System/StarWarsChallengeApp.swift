@@ -12,6 +12,7 @@ struct StarWarsChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark)
                 .inject(AppEnvironment.bootstrap().container)
         }
     }

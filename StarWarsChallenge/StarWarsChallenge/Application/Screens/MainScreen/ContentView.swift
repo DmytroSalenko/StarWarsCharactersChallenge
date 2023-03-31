@@ -35,6 +35,7 @@ struct ContentView: View {
                 }
             }
         }
+        .foregroundColor(Color.blue)
         .onAppear {
             managers.peopleManager.getAllPeople($peopleData)
         }
