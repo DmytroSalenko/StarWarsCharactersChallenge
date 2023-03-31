@@ -41,6 +41,7 @@ extension APIClient {
                 }
                 return $0.data
             }
+            .mapError { $0 }
             .decode(type: T.self, decoder: JSONDecoder().withDecodingStrategy(.convertFromSnakeCase))
             .receive(on: queue)
             .retry(retries)

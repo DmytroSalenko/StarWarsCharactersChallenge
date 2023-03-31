@@ -57,7 +57,11 @@ struct DetailsView: View {
                         }
                     }
                 case .failed(_):
-                    EmptyView()
+                    VStack {
+                        Spacer()
+                        Text("Oops. Something wrong happened. Try again you must")
+                        Spacer()
+                    }
                 }
             }
             

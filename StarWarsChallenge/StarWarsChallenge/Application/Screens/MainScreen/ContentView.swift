@@ -27,8 +27,12 @@ struct ContentView: View {
                             DetailsView(person: person)
                         }
                 }
-            case .failed(let error):
-                EmptyView()
+            case .failed(_):
+                VStack {
+                    Spacer()
+                    Text("Oops. Something wrong happened. Try again you must")
+                    Spacer()
+                }
             }
         }
         .onAppear {
