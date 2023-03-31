@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct PeopleResponseDTO: Decodable {
+struct PeopleResponseDTO: Codable {
     let count: Int
     let previous: String?
     let next: String?
     let results: [PeopleDTO]
 }
 
-struct PeopleDTO: Decodable {
+struct PeopleDTO: Codable {
     let name: String
     let height: String
     let mass: String

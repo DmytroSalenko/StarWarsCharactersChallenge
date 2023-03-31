@@ -9,13 +9,13 @@ import Foundation
 
 import Foundation
 
-struct FilmModel: Identifiable {
-    let id = UUID()
-    let title: String
-    let episodeId: Int
-    let openingCrawl: String
-    let director: String
-    let producer: String
+struct FilmModel: Identifiable, Codable, Equatable {
+    var id = UUID()
+    var title: String
+    var episodeId: Int
+    var openingCrawl: String
+    var director: String
+    var producer: String
     
     var crawlWordsNumber: Int {
         let components = openingCrawl.components(separatedBy: .whitespacesAndNewlines)

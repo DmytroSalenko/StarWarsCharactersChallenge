@@ -34,6 +34,7 @@
 		8571B12429D6080600BD1837 /* FilmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12329D6080600BD1837 /* FilmDTO.swift */; };
 		8571B12629D608AC00BD1837 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12529D608AC00BD1837 /* FilmModel.swift */; };
 		8571B12829D6097B00BD1837 /* FilmModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571B12729D6097B00BD1837 /* FilmModelMapper.swift */; };
+		85DFF36229D645C8009BD5B9 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DFF36129D645C8009BD5B9 /* URLProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		8571B12329D6080600BD1837 /* FilmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDTO.swift; sourceTree = "<group>"; };
 		8571B12529D608AC00BD1837 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
 		8571B12729D6097B00BD1837 /* FilmModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModelMapper.swift; sourceTree = "<group>"; };
+		85DFF36129D645C8009BD5B9 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8571B0DB29D4A7C300BD1837 /* StarWarsChallengeTests.swift */,
+				85DFF36129D645C8009BD5B9 /* URLProtocolMock.swift */,
 			);
 			path = StarWarsChallengeTests;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8571B0DC29D4A7C300BD1837 /* StarWarsChallengeTests.swift in Sources */,
+				85DFF36229D645C8009BD5B9 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
